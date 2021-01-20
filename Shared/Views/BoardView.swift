@@ -17,6 +17,7 @@ struct BoardView: View {
     @State var notes: [Int: [UInt8]] = [:]
 
     @State var solver: Solver? = nil
+    @State var waitus: Double = 0
 
     var progress: Float {
         var count = 0
@@ -65,12 +66,15 @@ struct BoardView: View {
                 }
                 Spacer()
             }
+            Slider(value: $waitus, in: 0...100, step: 1)
+            Spacer()
             GridEditKeyboardView(
                 index: self.$selectedIndex,
                 numbers: self.$numbers,
                 mode: self.mode
             )
             .padding()
+            Spacer()
         }
     }
 
@@ -85,9 +89,32 @@ struct BoardView: View {
     }
 
     func actionStart() {
-        self.solver = Solver(Grid(self.numbers))
+        for i in 0..<self.numbers.count {
+            if !self.given.contains(i) {
+                self.numbers[i] = 0
+            }
+        }
+        let grid = Grid(self.numbers)
+        if !grid.isValid {
+            return
+        }
+        self.solver = Solver(grid)
         self.mode = .solving
         self.notes = [:]
+
+        DispatchQueue.global().async {
+            var rv = self.solveNext()
+            repeat {
+                if self.waitus > 0 {
+                    DispatchQueue.main.sync {
+                        rv = self.solveNext()
+                    }
+                    usleep(UInt32(100 - self.waitus) * 1000 * 10)
+                } else {
+                    usleep(1000 * 1000)
+                }
+            } while rv
+        }
     }
 
     func actionEdit() {
@@ -113,6 +140,10 @@ struct BoardView: View {
     }
 
     func actionSolveNext() {
+        self.solveNext()
+    }
+
+    func solveNext() -> Bool {
         if let solver = self.solver {
             if let grid = solver.next() {
                 self.numbers = grid.raw
@@ -121,11 +152,14 @@ struct BoardView: View {
                     notes[state.i] = state.pn
                 }
                 self.notes = notes
+                return true
             } else {
                 self.notes = [:]
                 self.mode = .ready
+                return false
             }
         }
+        return false
     }
 
     func actionSolveFinish() {
@@ -174,24 +208,18 @@ struct GridEditKeyboardView: View {
     var body: some View {
         VStack {
             HStack {
+                button(0)
                 button(1)
                 button(2)
                 button(3)
+                button(4)
             }
             HStack {
-                button(4)
                 button(5)
                 button(6)
-            }
-            HStack {
                 button(7)
                 button(8)
                 button(9)
-            }
-            HStack {
-                Spacer()
-                button(0)
-                Spacer()
             }
         }
     }
