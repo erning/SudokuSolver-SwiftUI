@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CA164C9825B5CDA9006C385A /* swift-format.json in Resources */ = {isa = PBXBuildFile; fileRef = CA164C9725B5CDA9006C385A /* swift-format.json */; };
-		CA21A3EA25B6A49200C9BF1F /* SquareHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3E925B6A49100C9BF1F /* SquareHighlightView.swift */; };
-		CA21A3EB25B6A49200C9BF1F /* SquareHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3E925B6A49100C9BF1F /* SquareHighlightView.swift */; };
+		CA21A3EA25B6A49200C9BF1F /* HighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3E925B6A49100C9BF1F /* HighlightView.swift */; };
+		CA21A3EB25B6A49200C9BF1F /* HighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3E925B6A49100C9BF1F /* HighlightView.swift */; };
 		CA21A3F325B6A79C00C9BF1F /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3F225B6A79C00C9BF1F /* BoardView.swift */; };
 		CA21A3F425B6A79C00C9BF1F /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3F225B6A79C00C9BF1F /* BoardView.swift */; };
 		CA21A3F825B6AA7A00C9BF1F /* GridNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3F725B6AA7A00C9BF1F /* GridNumbersView.swift */; };
 		CA21A3F925B6AA7A00C9BF1F /* GridNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A3F725B6AA7A00C9BF1F /* GridNumbersView.swift */; };
 		CA21A40A25B6E45800C9BF1F /* GridNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A40925B6E45800C9BF1F /* GridNotesView.swift */; };
 		CA21A40B25B6E45800C9BF1F /* GridNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A40925B6E45800C9BF1F /* GridNotesView.swift */; };
-		CA21A41525B70AA800C9BF1F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A41425B70AA800C9BF1F /* ModelData.swift */; };
-		CA21A41625B70AA800C9BF1F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A41425B70AA800C9BF1F /* ModelData.swift */; };
-		CA21A41C25B7124100C9BF1F /* BoardEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A41B25B7124100C9BF1F /* BoardEditView.swift */; };
-		CA21A41D25B7124100C9BF1F /* BoardEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A41B25B7124100C9BF1F /* BoardEditView.swift */; };
+		CA21A41C25B7124100C9BF1F /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A41B25B7124100C9BF1F /* GridView.swift */; };
+		CA21A41D25B7124100C9BF1F /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21A41B25B7124100C9BF1F /* GridView.swift */; };
+		CAA243A525B8084C007AD3C6 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA243A425B8084C007AD3C6 /* Grid.swift */; };
+		CAA243A625B8084C007AD3C6 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA243A425B8084C007AD3C6 /* Grid.swift */; };
+		CAA243AA25B80886007AD3C6 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA243A925B80886007AD3C6 /* Solver.swift */; };
+		CAA243AB25B80886007AD3C6 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA243A925B80886007AD3C6 /* Solver.swift */; };
 		CAC93E3D25B58D6D00207492 /* SudokuSolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC93E2A25B58D6C00207492 /* SudokuSolverApp.swift */; };
 		CAC93E3E25B58D6D00207492 /* SudokuSolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC93E2A25B58D6C00207492 /* SudokuSolverApp.swift */; };
 		CAC93E3F25B58D6D00207492 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC93E2B25B58D6C00207492 /* ContentView.swift */; };
@@ -33,12 +35,13 @@
 /* Begin PBXFileReference section */
 		CA164C9725B5CDA9006C385A /* swift-format.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "swift-format.json"; sourceTree = "<group>"; };
 		CA164CA525B5D305006C385A /* SwiftFormatLint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SwiftFormatLint.sh; sourceTree = "<group>"; };
-		CA21A3E925B6A49100C9BF1F /* SquareHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareHighlightView.swift; sourceTree = "<group>"; };
+		CA21A3E925B6A49100C9BF1F /* HighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightView.swift; sourceTree = "<group>"; };
 		CA21A3F225B6A79C00C9BF1F /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		CA21A3F725B6AA7A00C9BF1F /* GridNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridNumbersView.swift; sourceTree = "<group>"; };
 		CA21A40925B6E45800C9BF1F /* GridNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridNotesView.swift; sourceTree = "<group>"; };
-		CA21A41425B70AA800C9BF1F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		CA21A41B25B7124100C9BF1F /* BoardEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEditView.swift; sourceTree = "<group>"; };
+		CA21A41B25B7124100C9BF1F /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		CAA243A425B8084C007AD3C6 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		CAA243A925B80886007AD3C6 /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 		CAC93E2A25B58D6C00207492 /* SudokuSolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuSolverApp.swift; sourceTree = "<group>"; };
 		CAC93E2B25B58D6C00207492 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAC93E2C25B58D6C00207492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,12 +82,12 @@
 		CA21A41025B7090F00C9BF1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CA21A3E925B6A49100C9BF1F /* SquareHighlightView.swift */,
+				CA21A3E925B6A49100C9BF1F /* HighlightView.swift */,
 				CAC93E4D25B58DE800207492 /* GridLinesView.swift */,
 				CA21A3F725B6AA7A00C9BF1F /* GridNumbersView.swift */,
 				CA21A40925B6E45800C9BF1F /* GridNotesView.swift */,
+				CA21A41B25B7124100C9BF1F /* GridView.swift */,
 				CA21A3F225B6A79C00C9BF1F /* BoardView.swift */,
-				CA21A41B25B7124100C9BF1F /* BoardEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,7 +95,8 @@
 		CA21A41325B709F800C9BF1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CA21A41425B70AA800C9BF1F /* ModelData.swift */,
+				CAA243A425B8084C007AD3C6 /* Grid.swift */,
+				CAA243A925B80886007AD3C6 /* Solver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,15 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA21A3EA25B6A49200C9BF1F /* SquareHighlightView.swift in Sources */,
-				CA21A41C25B7124100C9BF1F /* BoardEditView.swift in Sources */,
+				CAA243AA25B80886007AD3C6 /* Solver.swift in Sources */,
+				CA21A3EA25B6A49200C9BF1F /* HighlightView.swift in Sources */,
+				CA21A41C25B7124100C9BF1F /* GridView.swift in Sources */,
 				CA21A3F825B6AA7A00C9BF1F /* GridNumbersView.swift in Sources */,
 				CA21A40A25B6E45800C9BF1F /* GridNotesView.swift in Sources */,
 				CAC93E3F25B58D6D00207492 /* ContentView.swift in Sources */,
 				CA21A3F325B6A79C00C9BF1F /* BoardView.swift in Sources */,
-				CA21A41525B70AA800C9BF1F /* ModelData.swift in Sources */,
 				CAC93E4E25B58DE800207492 /* GridLinesView.swift in Sources */,
 				CAC93E3D25B58D6D00207492 /* SudokuSolverApp.swift in Sources */,
+				CAA243A525B8084C007AD3C6 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,15 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA21A3EB25B6A49200C9BF1F /* SquareHighlightView.swift in Sources */,
-				CA21A41D25B7124100C9BF1F /* BoardEditView.swift in Sources */,
+				CAA243AB25B80886007AD3C6 /* Solver.swift in Sources */,
+				CA21A3EB25B6A49200C9BF1F /* HighlightView.swift in Sources */,
+				CA21A41D25B7124100C9BF1F /* GridView.swift in Sources */,
 				CA21A3F925B6AA7A00C9BF1F /* GridNumbersView.swift in Sources */,
 				CA21A40B25B6E45800C9BF1F /* GridNotesView.swift in Sources */,
 				CAC93E4025B58D6D00207492 /* ContentView.swift in Sources */,
 				CA21A3F425B6A79C00C9BF1F /* BoardView.swift in Sources */,
-				CA21A41625B70AA800C9BF1F /* ModelData.swift in Sources */,
 				CAC93E4F25B58DE800207492 /* GridLinesView.swift in Sources */,
 				CAC93E3E25B58D6D00207492 /* SudokuSolverApp.swift in Sources */,
+				CAA243A625B8084C007AD3C6 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

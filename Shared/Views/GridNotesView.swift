@@ -18,9 +18,11 @@ struct GridNotesView: View {
             ForEach(0..<81) { i in
                 let (x, y) = (CGFloat(i % 9), CGFloat(i / 9))
                 if let note = self.notes[i] {
-                    SquareView(note: note)
-                        .offset(x: x * w, y: y * w)
-                        .frame(width: w, height: w)
+                    if !note.isEmpty {
+                        SquareView(note: note)
+                            .offset(x: x * w, y: y * w)
+                            .frame(width: w, height: w)
+                    }
                 }
             }
         }
@@ -51,13 +53,14 @@ struct GridNotesView: View {
 }
 
 struct GridNotesView_Previews: PreviewProvider {
+    static var notes: [Int: [UInt8]] = [
+        30: [1, 2, 3, 4, 6, 7, 8, 9],
+        31: [1, 2, 3, 4, 5, 6, 7, 8],
+        0: [3, 6, 8],
+        57: [1, 3],
+        80: [3, 6, 8],
+    ]
     static var previews: some View {
-        GridNotesView(
-            notes: [
-                1: [1, 2, 3, 4, 5, 6, 7, 8],
-                2: [2, 3, 4, 5, 6, 7, 8, 9],
-                81: [3],
-            ]
-        )
+        GridNotesView(notes: Self.notes)
     }
 }
