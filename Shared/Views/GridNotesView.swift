@@ -20,8 +20,8 @@ struct GridNotesView: View {
                 if let note = self.notes[i] {
                     if !note.isEmpty {
                         SquareView(note: note)
-                            .offset(x: x * w, y: y * w)
                             .frame(width: w, height: w)
+                            .offset(x: x * w, y: y * w)
                     }
                 }
             }
@@ -43,8 +43,8 @@ struct GridNotesView: View {
                     Text("\(self.note[i])")
                         .foregroundColor(Color(.systemGray))
                         .font(.system(size: w / 1.3, design: .monospaced))
-                        .offset(x: x * w, y: y * w)
                         .frame(width: w, height: w)
+                        .offset(x: x * w, y: y * w)
                 }
             }
             .scaledToFit()

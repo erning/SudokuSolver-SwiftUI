@@ -16,28 +16,18 @@ struct GridNumbersView: View {
             let width = min(geometry.size.width, geometry.size.height)
             let w: CGFloat = width / 9
 
-            let font = Font.system(size: w / 2.2, design: .monospaced)
-            let colorGivenForeground = Color.secondary
-            let colorGivenBackground = Color(.systemGray6)
-            let colorForeground = Color.primary
-
             ForEach(0..<81) { i in
                 let (x, y) = (CGFloat(i % 9), CGFloat(i / 9))
                 if self.numbers[i] > 0 {
-                    if self.given.contains(i) {
-                        Text("\(self.numbers[i])")
-                            .font(font)
-                            .foregroundColor(colorGivenForeground)
-                            .frame(width: w, height: w)
-                            .background(colorGivenBackground)
-                            .offset(x: x * w, y: y * w)
-                    } else {
-                        Text("\(self.numbers[i])")
-                            .font(font)
-                            .foregroundColor(colorForeground)
-                            .frame(width: w, height: w)
-                            .offset(x: x * w, y: y * w)
-                    }
+                    Text("\(self.numbers[i])")
+                        .font(Font.system(size: w / 2.2, design: .monospaced))
+                        .frame(width: w, height: w)
+                        .if(self.given.contains(i)) {
+                            $0.foregroundColor(Color.secondary).background(Color(.systemGray6))
+                        } else: {
+                            $0.foregroundColor(Color.primary)
+                        }
+                        .offset(x: x * w, y: y * w)
                 }
             }
         }

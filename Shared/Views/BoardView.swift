@@ -140,7 +140,7 @@ struct BoardView: View {
     }
 
     func actionSolveNext() {
-        self.solveNext()
+        let _ = self.solveNext()
     }
 
     func solveNext() -> Bool {
