@@ -238,9 +238,9 @@ struct GridEditKeyboardView: View {
                 return "\(v).square.fill"
             }
         }()
-        return Button(action: {
+        return Button {
             fill(v)
-        }) {
+        } label: {
             Image(systemName: name)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
