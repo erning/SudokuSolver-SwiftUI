@@ -16,9 +16,9 @@ struct GridNotesView: View {
             let w: CGFloat = width / 9
 
             ForEach(0..<81) { i in
-                let (x, y) = (CGFloat(i % 9), CGFloat(i / 9))
                 if let note = self.notes[i] {
                     if !note.isEmpty {
+                        let (x, y) = (CGFloat(i % 9), CGFloat(i / 9))
                         SquareView(note: note)
                             .frame(width: w, height: w)
                             .offset(x: x * w, y: y * w)
@@ -41,8 +41,8 @@ struct GridNotesView: View {
                     let j = i < 4 ? i : i + 1
                     let (x, y) = (CGFloat(j % 3), CGFloat(j / 3))
                     Text("\(self.note[i])")
-                        .foregroundColor(Color(.systemGray))
                         .font(.system(size: w / 1.3, design: .monospaced))
+                        .foregroundColor(Color(.systemGray))
                         .frame(width: w, height: w)
                         .offset(x: x * w, y: y * w)
                 }

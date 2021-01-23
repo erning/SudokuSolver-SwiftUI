@@ -3,10 +3,7 @@ import SwiftUI
 // https://fivestars.blog/swiftui/conditional-modifiers.html
 extension View {
     @ViewBuilder
-    func `if`<Transform: View>(
-        _ condition: Bool,
-        transform: (Self) -> Transform
-    ) -> some View {
+    func `if`<T: View>(_ condition: Bool, transform: (Self) -> T) -> some View {
         if condition {
             transform(self)
         } else {
@@ -15,10 +12,8 @@ extension View {
     }
 
     @ViewBuilder
-    func `if`<TrueContent: View, FalseContent: View>(
-        _ condition: Bool,
-        if ifTransform: (Self) -> TrueContent,
-        else elseTransform: (Self) -> FalseContent
+    func `if`<T: View, U: View>(
+        _ condition: Bool, if ifTransform: (Self) -> T, else elseTransform: (Self) -> U
     ) -> some View {
         if condition {
             ifTransform(self)

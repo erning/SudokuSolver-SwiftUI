@@ -85,6 +85,7 @@
 		CA21A41025B7090F00C9BF1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA19BF5825BB3F2F001F04A8 /* View+Conditional.swift */,
 				CA21A3E925B6A49100C9BF1F /* HighlightView.swift */,
 				CAC93E4D25B58DE800207492 /* GridLinesView.swift */,
 				CA21A3F725B6AA7A00C9BF1F /* GridNumbersView.swift */,
@@ -124,7 +125,6 @@
 				CAC93E2C25B58D6C00207492 /* Assets.xcassets */,
 				CA21A41025B7090F00C9BF1F /* Views */,
 				CA21A41325B709F800C9BF1F /* Model */,
-				CA19BF5825BB3F2F001F04A8 /* View+Conditional.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
